@@ -1,0 +1,22 @@
+{
+  "/": {
+    "title": "Cozy BBQ — Student charity BBQ in Kralingse Bos, Rotterdam",
+    "description": "Good food. Good company. Good cause. Join our student BBQ on 6 December 2026 (12:30–14:30) at Kralingse Bos and support 3FM Serious Request."
+  },
+  "/cause": {
+    "title": "The Cause — Cozy BBQ for 3FM Serious Request",
+    "description": "A small BBQ with a bigger purpose. Cozy BBQ is a student-led fundraiser supporting 3FM Serious Request and the Nederlandse Brandwonden Stichting."
+  },
+  "/menu": {
+    "title": "Menu & Tickets — Cozy BBQ",
+    "description": "Pick your combo: Burger + Drink €5.99 or Hot Dog + Drink €4.99. Every combo includes your spot at Cozy BBQ, 6 December 2026 in Kralingse Bos."
+  },
+  "/faq": {
+    "title": "FAQs — Cozy BBQ",
+    "description": "When and where is Cozy BBQ, what's in your combo, how booking works and where the money goes. All your questions, answered."
+  },
+  "/privacy": {
+    "title": "Privacy & Cookies — Cozy BBQ",
+    "description": "How the Cozy BBQ website handles cookies, optional analytics and your privacy."
+  }
+}
