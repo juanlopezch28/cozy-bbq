@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { isWeeztixConfigured, event } from '../config/site';
+import { isWeeztixConfigured, event, links } from '../config/site';
 import { combos, drinks, formatPrice } from '../content/menu';
 import { usePageMeta } from '../hooks/usePageMeta';
 import { useViewItemList } from '../hooks/useAnalytics';
@@ -126,7 +126,7 @@ export default function Menu() {
               <span className="steps__num" aria-hidden="true">2</span>
               <h3>Book in our ticket shop</h3>
               <p>
-                You'll continue to our ticket shop, powered by Weeztix. Choose how many combos you need, add your
+                You'll continue to our ticket shop, powered by {links.ticketShopProvider}. Choose how many combos you need, add your
                 details and pay there.
               </p>
             </li>

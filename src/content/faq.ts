@@ -39,8 +39,8 @@ export const faqs: FaqItem[] = [
     id: 'how-booking-works',
     question: 'How does the booking work?',
     answer: isWeeztixConfigured
-      ? 'Pick your combo on our Menu & Tickets page and complete your booking in our ticket shop, powered by Weeztix. You choose the number of tickets, fill in your details and pay there.'
-      : 'Pick your combo on our Menu & Tickets page and complete your booking in our ticket shop, powered by Weeztix. You choose the number of tickets, fill in your details and pay there. The ticket shop opens soon.',
+      ? `Pick your combo on our Menu & Tickets page and complete your booking in our ticket shop, powered by ${links.ticketShopProvider}. You choose the number of tickets, fill in your details and pay there.`
+      : `Pick your combo on our Menu & Tickets page and complete your booking in our ticket shop, powered by ${links.ticketShopProvider}. You choose the number of tickets, fill in your details and pay there. The ticket shop opens soon.`,
     link: { label: 'Go to Menu & Tickets', to: '/menu' },
   },
   {

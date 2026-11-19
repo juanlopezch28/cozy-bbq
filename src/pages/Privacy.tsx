@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { usePageMeta } from '../hooks/usePageMeta';
 import { openCookieSettings } from '../components/CookieConsent';
-import { isGa4Configured } from '../config/site';
+import { isGa4Configured, links } from '../config/site';
 
 export default function Privacy() {
   usePageMeta('/privacy');
@@ -52,7 +52,7 @@ export default function Privacy() {
 
           <h2>Ticket shop and external links</h2>
           <p>
-            Bookings and payments happen in our ticket shop, powered by Weeztix. It is a separate website with its own
+            Bookings and payments happen in our ticket shop, powered by {links.ticketShopProvider}. It is a separate website with its own
             privacy policy and cookie settings, which our cookie choice does not control. The same applies to Google
             Maps, WhatsApp, Instagram and the 3FM website when you open them.
           </p>

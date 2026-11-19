@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { writeConsent } from '../lib/consent';
 import { useConsent } from '../hooks/useAnalytics';
+import { links } from '../config/site';
 
 const OPEN_EVENT = 'cozybbq:open-cookie-settings';
 export const openCookieSettings = () => window.dispatchEvent(new Event(OPEN_EVENT));
@@ -104,7 +105,7 @@ export function CookieConsent() {
           </div>
 
           <p className="cookie-dialog__note">
-            Our ticket shop (Weeztix) is a separate website with its own cookie settings.
+            Our ticket shop ({links.ticketShopProvider}) is a separate website with its own cookie settings.
           </p>
 
           <div className="cookie-dialog__actions">
