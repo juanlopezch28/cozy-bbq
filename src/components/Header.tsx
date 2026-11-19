@@ -11,10 +11,11 @@ export const navItems = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
-  const { pathname } = useLocation();
+  const location = useLocation();
   const toggleRef = useRef<HTMLButtonElement>(null);
 
-  useEffect(() => setOpen(false), [pathname]);
+  // Close on every navigation, including taps on a link to the page you're already on.
+  useEffect(() => setOpen(false), [location.key]);
 
   useEffect(() => {
     if (!open) return;
@@ -51,7 +52,7 @@ export function Header() {
           </ul>
         </nav>
 
-        <Link to="/menu" className="btn btn--primary site-header__cta">
+        <Link to="/menu#combos" className="btn btn--primary site-header__cta">
           Book your spot
         </Link>
 
@@ -76,13 +77,13 @@ export function Header() {
           <ul>
             {navItems.map((item) => (
               <li key={item.to}>
-                <NavLink to={item.to} end={item.to === '/'} className="mobile-nav__link">
+                <NavLink to={item.to} end={item.to === '/'} className="mobile-nav__link" onClick={() => setOpen(false)}>
                   {item.label}
                 </NavLink>
               </li>
             ))}
           </ul>
-          <Link to="/menu" className="btn btn--primary btn--lg mobile-nav__cta">
+          <Link to="/menu#combos" className="btn btn--primary btn--lg mobile-nav__cta" onClick={() => setOpen(false)}>
             Book your spot
           </Link>
         </nav>

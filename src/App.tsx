@@ -19,7 +19,7 @@ function useRouteFocus() {
     if (location.hash) {
       const el = document.getElementById(location.hash.slice(1));
       if (el) {
-        el.scrollIntoView();
+        el.scrollIntoView({ block: 'start' });
         return;
       }
     }
@@ -29,7 +29,8 @@ function useRouteFocus() {
       return;
     }
     document.getElementById('main')?.focus({ preventScroll: true });
-  }, [location.pathname, location.hash]);
+    // location.key changes on every navigation, even to the URL you're already on.
+  }, [location.key]);
 }
 
 export default function App() {

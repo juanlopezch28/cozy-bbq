@@ -26,6 +26,7 @@ const ID = analytics.ga4MeasurementId;
 let scriptInjected = false;
 let enabled = false;
 let lastPageKey: string | null = null;
+let lastPagePath: string | null = null;
 let campaignApplied = false;
 const sentOnce = new Set<string>();
 
@@ -120,6 +121,9 @@ function deleteAnalyticsCookies() {
 export function trackPageView(pageKey: string, path: string) {
   if (!enabled || pageKey === lastPageKey) return;
   lastPageKey = pageKey;
+  // Same page again (e.g. tapping "Book your spot" while on /menu, or a #hash jump): not a new visit.
+  if (path === lastPagePath) return;
+  lastPagePath = path;
   let location = window.location.origin + path;
   if (!campaignApplied) {
     campaignApplied = true;

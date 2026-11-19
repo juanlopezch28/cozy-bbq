@@ -38,7 +38,7 @@ export default function Menu() {
         </div>
       </section>
 
-      <section className="section section--cream" aria-label="Combos">
+      <section id="combos" className="section section--cream" aria-label="Combos">
         <div className="container">
           <div className="included-note">
             <Flame className="included-note__icon" />

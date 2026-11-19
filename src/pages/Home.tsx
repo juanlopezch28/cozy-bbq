@@ -76,7 +76,7 @@ export default function Home() {
             </li>
           </ul>
           <div className="hero__actions">
-            <Link to="/menu" className="btn btn--primary btn--lg">
+            <Link to="/menu#combos" className="btn btn--primary btn--lg">
               Book your spot
             </Link>
             <Link to="/cause" className="btn btn--outline-light btn--lg">
@@ -213,7 +213,7 @@ export default function Home() {
             See you by <br />
             the grill.
           </h2>
-          <Link to="/menu" className="btn btn--primary btn--lg">
+          <Link to="/menu#combos" className="btn btn--primary btn--lg">
             Book your spot
           </Link>
         </div>
