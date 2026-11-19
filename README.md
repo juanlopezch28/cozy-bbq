@@ -62,7 +62,7 @@ Alternativa sin repositorio: `npm run build` y arrastra la carpeta `dist/` a app
 
 | Variable | Ejemplo | Sin valor… |
 | --- | --- | --- |
-| `VITE_TICKET_SHOP_URL` | `https://my.weezevent.com/cozy-bbq` | Usa el valor de `site.ts` (ya configurado) |
+| `VITE_TICKET_SHOP_URL` | `https://shop.weeztix.com/<id>` | Usa el valor de `site.ts` (ya configurado) |
 | `VITE_DONATION_URL` | URL de vuestra acción en 3FM | Se muestra "Learn about the cause" (página oficial) |
 | `VITE_GA4_MEASUREMENT_ID` | `G-XXXXXXXXXX` | Analítica totalmente inactiva |
 | `VITE_INSTAGRAM_URL` | `https://www.instagram.com/...` | Sin enlace en el footer |
@@ -70,10 +70,9 @@ Alternativa sin repositorio: `npm run build` y arrastra la carpeta `dist/` a app
 
 Las variables tienen prioridad sobre `site.ts`. Ver `.env.example`.
 
-## 6. Tienda de entradas (Weezevent)
+## 6. Tienda de entradas (Weeztix)
 
-**Conectada:** la tienda es `https://my.weezevent.com/cozy-bbq` (valor por defecto en `links.weeztixShopUrl` de `src/config/site.ts`; el nombre visible de la plataforma está en `links.ticketShopProvider`). Para cambiarla sin tocar código, define `VITE_TICKET_SHOP_URL` en Netlify. Las instrucciones de abajo se escribieron para Weeztix; los pasos equivalentes aplican a Weezevent (dos tarifas, comisiones a cargo del organizador, compra de prueba). La medición de compras (sección 8) debe configurarse en Weezevent en lugar de Weeztix.
-
+**Conectada:** `https://shop.weeztix.com/66ba9dac-e459-11f1-8e27-d65b0659bc31` (valor por defecto en `links.weeztixShopUrl` de `src/config/site.ts`; el nombre visible de la plataforma está en `links.ticketShopProvider`). Para cambiarla sin tocar código, define `VITE_TICKET_SHOP_URL` en Netlify.
 
 1. Crea la tienda en Weeztix con dos tipos de entrada: **The Burger Combo (€5.99)** y **The Hot Dog Combo (€4.99)**. Cada entrada equivale a un combo y una plaza; las cantidades y la compra de varias plazas se gestionan en la tienda.
 2. **Precio final:** para que el comprador pague exactamente €5.99 / €4.99, configura en Weeztix que las comisiones de servicio/transacción las asume el organizador (no se suman al cliente), o ajusta el precio base para que el total del checkout coincida. Compruébalo con una compra de prueba.
@@ -152,7 +151,7 @@ Esta integración **no está terminada** hasta verificarla con la configuración
 - Fuentes servidas localmente (Anton + Inter, vía `@fontsource`).
 
 **Pendiente (datos o conexiones externas)**
-- Tienda (Weezevent) conectada: falta revisar comisiones, tipo de IVA y hacer una compra de prueba.
+- Tienda (Weeztix) conectada: falta revisar comisiones, tipo de IVA y hacer una compra de prueba.
 - URL de vuestra acción en 3FM (donación).
 - ID de GA4 y medición de compras en Weeztix (sección 8).
 - Instagram y número de WhatsApp.

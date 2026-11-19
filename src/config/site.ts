@@ -38,14 +38,14 @@ export const venueOneLine = `${event.venue.name}, ${event.venue.postalCode} ${ev
 
 export const links = {
   /**
-   * Our own ticket shop (Weezevent). Without a URL, booking buttons show
+   * Our own ticket shop (Weeztix). Without a URL, booking buttons show
    * "Tickets coming soon" (disabled). Env var VITE_TICKET_SHOP_URL (or the
    * older VITE_WEEZTIX_SHOP_URL) overrides this value.
    */
   weeztixShopUrl:
-    env('VITE_TICKET_SHOP_URL') || env('VITE_WEEZTIX_SHOP_URL') || 'https://my.weezevent.com/cozy-bbq',
+    env('VITE_TICKET_SHOP_URL') || env('VITE_WEEZTIX_SHOP_URL') || 'https://shop.weeztix.com/66ba9dac-e459-11f1-8e27-d65b0659bc31',
   /** Name of the ticketing platform, shown in public copy. */
-  ticketShopProvider: 'Weezevent',
+  ticketShopProvider: 'Weeztix',
   /**
    * PENDING — the page of OUR OWN fundraising action on the 3FM Serious Request
    * platform. Until set, the site shows "Learn about the cause" (official info page).
